@@ -18,21 +18,11 @@
 ==============
 
 ```objc
-import UIKit
-import Foundation
-
-class ViewController: UIViewController {
-
-lazy var placeholderTextView = PlaceholerTextView(placeholder: "please input", placeholderColor: UIColor.lightGray, frame: CGRect(x: 40, y: 100, width: 320, height: 200))
-
-override func viewDidLoad() {
-super.viewDidLoad()
-
-placeholderTextView.isShowCountLabel = true
-placeholderTextView.limitWords = 1000
-view.addSubview(placeholderTextView)
-
-}
-
-}
+      // 初始化placeholderTextView
+       lazy var placeholderTextView = PlaceholerTextView(placeholder: "please input", placeholderColor: UIColor.lightGray, frame: CGRect(x: 40, y: 100, width: 320, height: 200))
+    
+        //设置是否显示计算label
+        placeholderTextView.isShowCountLabel = true
+        //限制字数
+        placeholderTextView.limitWords = 1000
 ```
