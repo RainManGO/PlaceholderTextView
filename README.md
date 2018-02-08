@@ -14,9 +14,8 @@
 - **支持xib**: xib storyBoard 创建直接对应类即可。
 
 
-使用方法
+代码使用方法
 ==============
-
 ```objc
       // 初始化placeholderTextView
        lazy var placeholderTextView = PlaceholerTextView(placeholder: "please input", placeholderColor: UIColor.lightGray, frame: CGRect(x: 40, y: 100, width: 320, height: 200))
@@ -26,3 +25,7 @@
         //限制字数
         placeholderTextView.limitWords = 1000
 ```
+
+XIB代码使用方法
+==============
+
