@@ -14,7 +14,7 @@ struct PlaceholderLabelOrigin {
     let y = 11.8
 }
 
-//内边距
+//内边距，可根据个人手动调整
 struct TextContainerInset{
     let top:CGFloat = 12.0
     let left:CGFloat = 12.0
@@ -29,15 +29,24 @@ class PlaceholerTextView: UITextView {
     lazy var countLabel = UILabel()
 
     //储存属性
-    var placeholderGlobal:String?
-    var placeholderColorGlobal:UIColor?
-    var isReturnHidden:Bool = false     //是否点击返回失去响应
-    var isShowCountLabel:Bool = false { //是否显示计算个数的Label
+    @objc var placeholderGlobal:String?{      //提示文字
+        didSet{
+            plaleLabel.text = placeholderGlobal
+            plaleLabel.sizeToFit()
+        }
+    }
+    @objc var placeholderColorGlobal:UIColor?{
+        didSet{
+            plaleLabel.textColor = placeholderColorGlobal
+        }
+    }
+    @objc var isReturnHidden:Bool = false     //是否点击返回失去响应
+    @objc var isShowCountLabel:Bool = false { //是否显示计算个数的Label
         didSet{
             countLabel.isHidden = !isShowCountLabel
         }
     }
-    var limitWords:UInt = 999999             //限制输入个数   默认为999999，不限制输入
+    @objc var limitWords:UInt = 999999             //限制输入个数   默认为999999，不限制输入
     
     
     //MARK: - 系统方法
@@ -53,6 +62,7 @@ class PlaceholerTextView: UITextView {
         super.init(frame: frame, textContainer: textContainer)
     }
     
+    //XIB 调用
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup(placeholder: nil, placeholderColor: nil)
@@ -80,7 +90,7 @@ extension PlaceholerTextView{
         addSubview(plaleLabel)
         plaleLabel.frame.origin = CGPoint(x: PlaceholderLabelOrigin().x, y: PlaceholderLabelOrigin().y)
         textContainerInset = UIEdgeInsetsMake(TextContainerInset().top, TextContainerInset().left, TextContainerInset().bottom, TextContainerInset().right)
-        
+        print(plaleLabel)
         countLabel.font = font
         addSubview(countLabel)
     }
@@ -100,11 +110,12 @@ extension PlaceholerTextView : UITextViewDelegate{
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         
-        if text=="\n" {
+        if text=="\n"&&isReturnHidden==true {
             textView.resignFirstResponder()
         }
         
-        if range.location+range.length > limitWords {
+        //大于等于限制字数，而且不是删除键的时候不可以输入。
+        if range.location+range.length >= limitWords && !(text as NSString).isEqual(to: ""){
             return false
         }
         
