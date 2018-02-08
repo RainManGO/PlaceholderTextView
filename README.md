@@ -28,4 +28,12 @@
 
 XIB代码使用方法
 ==============
+![image](https://github.com/RainManGO/PlaceholderTextView/blob/master/xibUsage.png)
+
+
+
+演示
+==============
+![image](https://github.com/RainManGO/PlaceholderTextView/blob/master/demo.gif)
+
 
