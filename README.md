@@ -11,6 +11,7 @@
 - **Placeholder占位字**: 没有内容的时候显示的文字
 - **字数统计**:显示输出字的个数 。
 - **字数限制**: 输入到限制字数不让输入。
+- **retrun关闭键盘**: 可选return关闭键盘。
 - **支持xib**: xib storyBoard 创建直接对应类即可。
 
 
@@ -24,6 +25,8 @@
         placeholderTextView.isShowCountLabel = true
         //限制字数
         placeholderTextView.limitWords = 1000
+        //是否return关闭键盘
+        placeholderTextView.isReturnHidden = true
 ```
 
 XIB代码使用方法
