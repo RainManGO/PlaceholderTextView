@@ -12,7 +12,7 @@ import Foundation
 class ViewController: UIViewController {
 
     // 初始化placeholderTextView
-    lazy var placeholderTextView = PlaceholerTextView(placeholder: "please input", placeholderColor: UIColor.lightGray, frame: CGRect(x: 40, y: 100, width: 320, height: 200))
+    lazy var placeholderTextView = PlaceholderTextView(placeholder: "please input", placeholderColor: UIColor.lightGray, frame: CGRect(x: 40, y: 100, width: 320, height: 200))
     
     override func viewDidLoad() {
         super.viewDidLoad()

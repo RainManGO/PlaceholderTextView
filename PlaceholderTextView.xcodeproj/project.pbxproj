@@ -12,7 +12,7 @@
 		2A88271D202AC7FE00209403 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A88271B202AC7FE00209403 /* Main.storyboard */; };
 		2A88271F202AC7FE00209403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A88271E202AC7FE00209403 /* Assets.xcassets */; };
 		2A882722202AC7FE00209403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A882720202AC7FE00209403 /* LaunchScreen.storyboard */; };
-		2A88272B202AC87C00209403 /* PlaceholerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A88272A202AC87C00209403 /* PlaceholerTextView.swift */; };
+		EB2432F02179DA84002C0543 /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2432EF2179DA84002C0543 /* PlaceholderTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		2A88271E202AC7FE00209403 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A882721202AC7FE00209403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A882723202AC7FE00209403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A88272A202AC87C00209403 /* PlaceholerTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholerTextView.swift; sourceTree = "<group>"; };
+		EB2432EF2179DA84002C0543 /* PlaceholderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 		2A882729202AC80C00209403 /* PlaceholderTextView */ = {
 			isa = PBXGroup;
 			children = (
-				2A88272A202AC87C00209403 /* PlaceholerTextView.swift */,
+				EB2432EF2179DA84002C0543 /* PlaceholderTextView.swift */,
 			);
 			path = PlaceholderTextView;
 			sourceTree = "<group>";
@@ -147,9 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A88272B202AC87C00209403 /* PlaceholerTextView.swift in Sources */,
 				2A88271A202AC7FE00209403 /* ViewController.swift in Sources */,
 				2A882718202AC7FE00209403 /* AppDelegate.swift in Sources */,
+				EB2432F02179DA84002C0543 /* PlaceholderTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
