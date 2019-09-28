@@ -114,7 +114,8 @@ extension PlaceholderTextView : UITextViewDelegate{
         }
         
         //大于等于限制字数，而且不是删除键的时候不可以输入。
-        if range.location+range.length >= limitWords && !(text as NSString).isEqual(to: ""){
+        //考虑复制粘贴和光标不在最后得情况
+        if textView.text.count + range.length + text.count >= limitWords && !(text as NSString).isEqual(to: ""){
             return false
         }
         
